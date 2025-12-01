@@ -105,8 +105,9 @@
           <div class="label">Text</div>
         </div>
         <div class="content">
-          <h2 id="fejlesztes">Development process of the data gathering</h2>
-          <p style="text-align: justify;"><em>During the project, I first connected to the device via serial communication and configured its parameters. After that, I calculated a resultant value from the vibration data measured along the three axes, which I then collected together with the other values in a list. The gathered data is saved every 10,000 rows into a .csv file, each file tagged with a timestamp. If the machine’s vibration exceeds the set threshold, the program uses HID communication to connect to an external flasher, sending it a high value to activate it. Otherwise, every five seconds the flasher receives a low value.</em></p>
+          <h2 id="fejlesztes">Development process of the data gathering - The logic</h2>
+          <p style="text-align: justify;"><em>The digital multimeter used in the measurement system only recorded the measurement intervals relevant to me, i.e., always those moments when the product was actually collecting data. These were accompanied by separate time stamps, which the instrument entered into the measurement log. In addition, I had to take into account the gradually changing environmental temperature conditions, the data for which were stored in a completely separate file. The goal was to only count measurements taken at a stable temperature, so I used the last half hour of each temperature step at the end of the one-hour stabilization period as a basis.</em></p>
+		  <p style="text-align: justify;"><em>From the outset, the logical structure of the program was designed to be able to automatically extract relevant information from different measurement programs and data saves, and to process only the sections that are important to it, despite continuous measurement. This is organically linked to the integration module, which determines the area under the sampled consumption signals; here I deliberately omitted the first 100 ms because it contained distorted data from the pretrigger phase.</em></p>
         </div>
       </section>
 
