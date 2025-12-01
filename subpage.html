@@ -105,7 +105,7 @@
           <div class="label">Text</div>
         </div>
         <div class="content">
-          <h2 id="fejlesztes">Development process of the data gathering - The logic</h2>
+          <h2 id="fejlesztes">Development process - The logic</h2>
           <p style="text-align: justify;"><em>The digital multimeter used in the measurement system only recorded the measurement intervals relevant to me, i.e., always those moments when the product was actually collecting data. These were accompanied by separate time stamps, which the instrument entered into the measurement log. In addition, I had to take into account the gradually changing environmental temperature conditions, the data for which were stored in a completely separate file. The goal was to only count measurements taken at a stable temperature, so I used the last half hour of each temperature step at the end of the one-hour stabilization period as a basis.</em></p>
 		  <p style="text-align: justify;"><em>From the outset, the logical structure of the program was designed to be able to automatically extract relevant information from different measurement programs and data saves, and to process only the sections that are important to it, despite continuous measurement. This is organically linked to the integration module, which determines the area under the sampled consumption signals; here I deliberately omitted the first 100 ms because it contained distorted data from the pretrigger phase.</em></p>
         </div>
@@ -151,8 +151,8 @@
           <div class="label">Text</div>
         </div>
         <div class="content">
-          <h2 id="fejlesztes">Development process of the GUI</h2>
-          <p style="text-align: justify;"><em>The goal of the project was to create a simple interface that displays the measurement results on a graph within a user-defined time interval. In addition to specifying the start and end times, the user can also set a threshold value and choose whether to apply data smoothing. Smoothing is enabled by default and uses a 5-sample moving average (which corresponds to about 1 second of smoothing at a 5 Hz sampling rate). On the graph, the current threshold is shown as a green dashed line, while periods exceeding the threshold are highlighted with red 3-minute bands. In the case of large gaps between samples, the system inserts interruptions (NaN values) so that these breaks are also visible on the plot. There is also an option to export the graph.</em></p>
+          <h2 id="fejlesztes">Development process - OOP</h2>
+          <p style="text-align: justify;"><em>During the implementation of the task, I strove to ensure that each step of data processing was clearly distinguishable, transparent, and sustainable, which is why I organized the functions into an object-oriented structure. I broke down separate tasks—such as file collection, timestamp management, data loading, and integration—into independent methods, making it easier to maintain, expand, or even test the system in the future. Thanks to this architecture, the code became logically expandable and provided a stable foundation for the solution to evolve from a one-off tool into a real application.</em></p>
         </div>
       </section>
 
