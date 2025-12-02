@@ -109,17 +109,21 @@
           <p style="text-align: justify;"><em>The digital multimeter used in the measurement system only recorded the measurement intervals relevant to me, i.e., always those moments when the product was actually collecting data. These were accompanied by separate time stamps, which the instrument entered into the measurement log. In addition, I had to take into account the gradually changing environmental temperature conditions, the data for which were stored in a completely separate file. The goal was to only count measurements taken at a stable temperature, so I used the last half hour of each temperature step at the end of the one-hour stabilization period as a basis.</em></p>
 		  <p style="text-align: justify;"><em>From the outset, the logical structure of the program was designed to be able to automatically extract relevant information from different measurement programs and data saves, and to process only the sections that are important to it, despite continuous measurement. This is organically linked to the integration module, which determines the area under the sampled consumption signals; here I deliberately omitted the first 100 ms because it contained distorted data from the pretrigger phase.</em></p>
         </div>
-      </section>
+      </section> 
 
-	  <!-- CELL 3: Fejlesztési lépések -->
+      <!-- CELL 3: KÉP -->
       <section class="cell">
         <div class="gutter">
           <div class="prompt">In [3]:</div>
-          <div class="label">Text</div>
+          <div class="label">Image</div>
         </div>
         <div class="content">
-          <h2 id="fejlesztes">Development process - OOP</h2>
-          <p style="text-align: justify;"><em>During the implementation of the task, I strove to ensure that each step of data processing was clearly distinguishable, transparent, and sustainable, which is why I organized the functions into an object-oriented structure. I broke down separate tasks—such as file collection, timestamp management, data loading, and integration—into independent methods, making it easier to maintain, expand, or even test the system in the future. Thanks to this architecture, the code became logically expandable and provided a stable foundation for the solution to evolve from a one-off tool into a real application.</em></p>
+          <figure>
+            <div class="imgwrap">
+              <img src="Névtelen terv.png" alt="Process steps" />
+            </div>
+            <figcaption style="text-align: center;"><em>Process steps</em></figcaption>
+          </figure>
         </div>
       </section>
 
@@ -130,15 +134,27 @@
           <div class="label">Text</div>
         </div>
         <div class="content">
+          <h2 id="fejlesztes">Development process - OOP</h2>
+          <p style="text-align: justify;"><em>During the implementation of the task, I strove to ensure that each step of data processing was clearly distinguishable, transparent, and sustainable, which is why I organized the functions into an object-oriented structure. I broke down separate tasks—such as file collection, timestamp management, data loading, and integration—into independent methods, making it easier to maintain, expand, or even test the system in the future. Thanks to this architecture, the code became logically expandable and provided a stable foundation for the solution to evolve from a one-off tool into a real application.</em></p>
+        </div>
+      </section>
+
+	  <!-- CELL 5: Fejlesztési lépések -->
+      <section class="cell">
+        <div class="gutter">
+          <div class="prompt">In [5]:</div>
+          <div class="label">Text</div>
+        </div>
+        <div class="content">
           <h2 id="fejlesztes">Development process - GUI</h2>
           <p style="text-align: justify;"><em>I created the user interface using Qt Designer, as this method allows for the quick and modular creation of a clear interface that can be easily converted into Python code after design. It was important that the user be able to browse the necessary files and folders as easily as possible, so I placed separate browse buttons next to the input fields showing the usual access path. The central element of the interface is a large text field that shows the processing progress in real time, and if necessary, the output information can be easily copied from here for documentation purposes. At the bottom of the GUI, there is a progress bar that visually shows the program running, giving the user clear feedback that data processing is currently taking place in the background. As a result, the solution has been developed into a standalone application that anyone can easily use for their own measurement work without having to have a deep understanding of the underlying logic or measurement data structures.</em></p>
         </div>
       </section>
 
-      <!-- CELL 5: KÉP -->
+      <!-- CELL 6: KÉP -->
       <section class="cell">
         <div class="gutter">
-          <div class="prompt">In [5]:</div>
+          <div class="prompt">In [6]:</div>
           <div class="label">Image</div>
         </div>
         <div class="content">
@@ -151,11 +167,11 @@
         </div>
       </section>
 
-      <!-- CELL 6: KÉP -->
+      <!-- CELL 7: KÉP -->
       <section class="cell">
         <!-- <h2 id="validacio">Steps</h2> -->
         <div class="gutter">
-          <div class="prompt">In [6]:</div>
+          <div class="prompt">In [7]:</div>
           <div class="label">Image</div>
         </div>
         <div class="content">
@@ -168,10 +184,10 @@
         </div>
       </section>
 
-      <!-- CELL 7: KÉP -->
+      <!-- CELL 8: KÉP -->
       <section class="cell">
         <div class="gutter">
-          <div class="prompt">In [7]:</div>
+          <div class="prompt">In [8]:</div>
           <div class="label">Image</div>
         </div>
         <div class="content">
